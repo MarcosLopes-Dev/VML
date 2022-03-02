@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="images/favicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="Marcos Lopes" />
+
+  <title>VML Açougue</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <style>
+    .buttonAdd {
+      background-color: #ffe600; /* Green */
+      border: none;
+      color: rgb(7, 5, 5);
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 12px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    .buttonAdd {border-radius: 50%;}
+    </style>
+
+</head>
+
+<body>
+
+  <!-- header section strats -->
+  <header class="header_section">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a class="navbar-brand" href="index.php">
+          <span>
+            Painel administrativo
+          </span>
+        </a>
+        <div class="" id="">
+
+          <div class="custom_menu-btn">
+            <button onclick="openNav()">
+              <span class="s-1"> </span>
+              <span class="s-2"> </span>
+              <span class="s-3"> </span>
+            </button>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="index.php">inicial</a>
+
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end header section -->
+
+  <!-- slider section -->
+  <section class="slider_section position-relative">
+    <div class="slider_bg_box">
+      <img src="images/slider-bg.jpg" alt="">
+    </div>
+    <div class="slider_bg"></div>
+    <div class="container">
+      <div class="col-md-12 col-lg-12">
+        <div class="detail-box">
+          
+          <h2>
+            As modificações serão persistidas no banco de dados.
+          </h2>
+          <br>
+          <h4>Digite o código do produto e suas informações para modificá-las no banco de dados.</h4>
+
+
+
+
+        
+        </div>
+
+       
+      </div>
+    </div>
+  </section>
+  <!-- end slider section -->
+
+  <div class="card w-50">
+    <div class="card-body">
+      <h5 class="card-title">Adicionar itens</h5>
+      <p class="card-text">nome:
+        <input type="text" class="form-control" placeholder="Ex. Alcatra bovina">
+      </p>
+      <p class="card-text">Tipo:
+        <input type="text" class="form-control" placeholder="Ex. Bovino / Suíno / Frango">
+      </p>
+      <p class="card-text">Preço:
+        <input type="text" class="form-control" placeholder="Ex. 4.20">
+      </p>
+   
+      <button type="button" name="adicionar" class="btn btn-success" onclick="AdicionarProduto()" >Adicionar Produto</button>
+    </div>
+  </div>
+  
+  <div class="card w-50">
+    <div class="card-body">
+      <h5 class="card-title">Editar preço</h5>
+      <p class="card-text">Código do produto:
+        <input type="text" class="form-control" placeholder="Ex. 20">
+      </p>
+      <p class="card-text">Novo preço:
+        <input type="text" class="form-control" placeholder="Ex. 45.90">
+      </p>
+
+      <button type="button" name="modificar" class="btn btn-warning" onclick="ModificarProduto()">Modificar produto</button> 
+    </div>
+  </div>
+  
+  <div class="card w-50">
+    <div class="card-body">
+      <h5 class="card-title">Excluir produto</h5>
+      <p class="card-text">Código do produto:
+        <input type="text" class="form-control" placeholder="Ex. 20">
+      </p>
+      <p class="card-text">nome:
+        <input type="text" class="form-control" placeholder="Ex. 45.90">
+      </p>
+      <button type="button" name="excluir" class="btn btn-danger" onclick="ExcluirProduto()">Excluir produto</button> 
+    </div>
+  </div>
+    
+
+
+  
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+
+
+  <script>
+    function add() {
+      var quantity_temp = document.getElementById("testLabelq").innerText;
+      var quantity_int = parseFloat(quantity_temp, 10) + 0.5;
+      document.getElementById("testLabelq").innerHTML = quantity_int.toString();
+    }
+    function remove() {
+      var quantity_temp = document.getElementById("testLabelq").innerText;
+      var quantity_int = parseFloat(quantity_temp, 10) - 0.5;
+      if(quantity_int >= 0)
+      {
+      document.getElementById("testLabelq").innerHTML = quantity_int.toString();
+      }
+    }
+  </script>
+
+</body>
+
+</html>

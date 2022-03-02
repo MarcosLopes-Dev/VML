@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="images/favicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="Marcos Lopes" />
+
+  <title>VML Açougue</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body>
+
+  <!-- header section strats -->
+  <header class="header_section">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a class="navbar-brand" href="index.html">
+          <span>
+            Painel administrativo
+          </span>
+        </a>
+        <div class="" id="">
+
+          <div class="custom_menu-btn">
+            <button onclick="openNav()">
+              <span class="s-1"> </span>
+              <span class="s-2"> </span>
+              <span class="s-3"> </span>
+            </button>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="index.html">inicial</a>
+
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end header section -->
+
+  <!-- slider section -->
+  <section class="slider_section position-relative">
+    <div class="slider_bg_box">
+      <img src="images/slider-bg.jpg" alt="">
+    </div>
+    <div class="slider_bg"></div>
+    <div class="container">
+      <div class="col-md-9 col-lg-8">
+        <div class="detail-box">
+
+          <h4>Usuário ou senha inválidos.</h4>
+          
+          <form action="login.php" method="post">
+            <div class="form-group">
+              <label for="usuario">Usuário</label>
+              <input type="user" name="user" class="form-control" id="user" aria-describedby="emailHelp" placeholder="usuário">
+              <small id="emailHelp" class="form-text text-muted">Digite o nome de usuário</small>
+            </div>
+            <div class="form-group">
+              <label for="senha">Senha</label>
+              <input type="password" name="password" class="form-control" id="password" placeholder="senha">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end slider section -->
+
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> Todos os direitos reservados
+        <a href="https://html.design/">VML - Açougue LTDA</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+
+
+  <script>
+    function add() {
+      var quantity_temp = document.getElementById("testLabelq").innerText;
+      var quantity_int = parseFloat(quantity_temp, 10) + 0.5;
+      document.getElementById("testLabelq").innerHTML = quantity_int.toString();
+    }
+    function remove() {
+      var quantity_temp = document.getElementById("testLabelq").innerText;
+      var quantity_int = parseFloat(quantity_temp, 10) - 0.5;
+      if(quantity_int >= 0)
+      {
+      document.getElementById("testLabelq").innerHTML = quantity_int.toString();
+      }
+    }
+  </script>
+
+</body>
+
+</html>
